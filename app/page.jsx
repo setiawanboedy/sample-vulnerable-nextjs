@@ -10,11 +10,9 @@ export default function HomePage({ searchParams }) {
       <h1>Security Auditing Testbed</h1>
       <p>Request ID: <code>{requestId}</code></p>
 
-      {/* SAST Flaw: Dangerous raw HTML injection from unsanitized searchParams */}
-      <div
-        id="greeting-box"
-        dangerouslySetInnerHTML={{ __html: userGreeting }}
-      />
+      <div id="greeting-box">
+        {userGreeting}
+      </div>
     </main>
   );
 }
